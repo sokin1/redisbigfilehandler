@@ -1,0 +1,11 @@
+Procedure
+    Uploader
+        1. Split files with 4*1024*1024(No base64 encoding)
+        2. For each splitted files,
+            2.1. Encode base64
+            2.2. Upload it to Redis
+    Downloader
+        1. Download files and store them to files
+        2. For each downloaded files,
+            2.1. Decode base64
+            2.2. Combine them into single file
